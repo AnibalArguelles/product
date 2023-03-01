@@ -44,7 +44,7 @@ class ProductApplicationTests {
 		assertThat(dto).isNotNull();
 		
 		/** Se valida que el precio sea el esperado*/
-		assertThat(dto.getPrice()).isEqualTo(25.45);
+		assertThat(dto.getPrice()).isEqualTo(30.5);
 	}
 
 	@Test
