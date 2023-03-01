@@ -30,6 +30,9 @@ class ProductApplicationTests {
 		log.info("Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)");
 		log.info("valor devuelto por el servicio " + dto);
 		assertThat(dto).isNotNull();
+		
+		/** Se valida que el precio sea el esperado*/
+		assertThat(dto.getPrice()).isEqualTo(25.45);
 	}
 
 	@Test
@@ -39,6 +42,9 @@ class ProductApplicationTests {
 		log.info("Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA)");
 		log.info("valor devuelto por el servicio " + dto);
 		assertThat(dto).isNotNull();
+		
+		/** Se valida que el precio sea el esperado*/
+		assertThat(dto.getPrice()).isEqualTo(25.45);
 	}
 
 	@Test
@@ -48,6 +54,9 @@ class ProductApplicationTests {
 		log.info("Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA)");
 		log.info("valor devuelto por el servicio " + dto);
 		assertThat(dto).isNotNull();
+		
+		/** Se valida que el precio sea el esperado*/
+		assertThat(dto.getPrice()).isEqualTo(30.5);
 	}
 
 	@Test
@@ -57,6 +66,9 @@ class ProductApplicationTests {
 		log.info("Test 4: petición a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA)");
 		log.info("valor devuelto por el servicio " + dto);
 		assertThat(dto).isNotNull();
+		
+		/** Se valida que el precio sea el esperado*/
+		assertThat(dto.getPrice()).isEqualTo(38.95);
 	}
 
 	@Test
@@ -65,6 +77,8 @@ class ProductApplicationTests {
 		PriceDTO dto =  this.restTemplate.getForObject(url, PriceDTO.class);
 		log.info("Test 5: petición a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA)");
 		log.info("valor devuelto por el servicio " + dto);
+		
+		/** Se espera un null devuelto por el servicio, no se valida price */
 		assertThat(dto).isNull();
 	}
 
